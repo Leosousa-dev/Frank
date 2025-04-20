@@ -1,4 +1,6 @@
-module Cli.Cli where
+module Cli.Cli (
+    runCli
+)where
 
 import Cli.Menssages
 

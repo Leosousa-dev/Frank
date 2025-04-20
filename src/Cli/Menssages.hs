@@ -1,19 +1,26 @@
-module Cli.Menssages where
-
-welcomeMessage :: String
-welcomeMessage = "\n\nFrank  seu commitador com zero paciência pra seu código meia-boca\n\n"
+module Cli.Menssages (
+    welcomeMessage,
+    msgFree,
+    msgInvalid,
+    msgToken,
+    errTokenInvalid,
+    
+) where
 
 
 -- Response messages
 
 
-msgFree, msgToken, msgInvalid :: String
+welcomeMessage, msgFree, msgToken :: String
+welcomeMessage = "\n\n        Welcome to Frank CLI\nYour sarcastic coding assistant bot\n\n"
 msgFree = "Frank: Modo pobre ativado. Prepare-se pra sinceridade."
 msgToken    = "Frank: Então tá, manda o token aí, celebridade."
-msgInvalid = "Frank: Isso aí nem opção era. Tenta de novo, Einstein."
+
+
 
 
 
 -- Menssages  error
-errTokenInvalid :: String
+errTokenInvalid, msgInvalid :: String
 errTokenInvalid = "Frank: Esse token aí parece mais um CPF aleatório. Tenta de novo."
+msgInvalid = "Frank: Isso aí nem opção era. Tenta de novo, Einstein."
