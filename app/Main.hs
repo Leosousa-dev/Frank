@@ -1,7 +1,11 @@
-module Main (main) where
+import System.Environment (getArgs)
+
+import Cli.Cli
 
 
-import Core.Cli
 
 main :: IO ()
-main = showmessage
+main = do 
+    args <- getArgs
+    runCli args
+
