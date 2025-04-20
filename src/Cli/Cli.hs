@@ -1,8 +1,11 @@
 module Cli.Cli where
 
+import Cli.Menssages
 
-welcomeMessage :: String
-welcomeMessage = "\n \ESC[1m🧠 FRANK v0.1 — seu commit buddy robótico\ESC[0m\n\n Ah, mais um desenvolvedor se arrastando até mim... vamos fingir que você sabe o que está fazendo.\n\n"
+
+
+
+
 
 
 runCli :: [String] -> IO ()
