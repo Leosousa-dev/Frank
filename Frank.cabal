@@ -27,6 +27,7 @@ library
   exposed-modules:
       Cli.Cli
       Cli.Menssages
+      Cli.Parser
   other-modules:
       Paths_Frank
   autogen-modules:

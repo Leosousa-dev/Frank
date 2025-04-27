@@ -1,6 +1,6 @@
 import System.Environment (getArgs)
 
-import Cli.Cli
+import Cli.Parser
 
 
 
