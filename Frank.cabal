@@ -25,7 +25,7 @@ source-repository head
 
 library
   exposed-modules:
-      Cli.Cli
+      Cli.Commands.Commands
       Cli.Menssages
       Cli.Parser
   other-modules:
