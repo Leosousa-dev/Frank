@@ -8,4 +8,5 @@ main :: IO ()
 main = do 
     args <- getArgs
     runCli args
+    
 
