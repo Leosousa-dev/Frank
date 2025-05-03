@@ -4,5 +4,6 @@ import System.Process
 
 excComand :: IO()
 excComand = do
-    _ <- system "echo hello world"
+    _ <- system "git diff --cached --name-only"
+    _ <- system "git --no-pager diff --word-diff=porcelain | grep -E '^[+-][^+-]'"
     return()

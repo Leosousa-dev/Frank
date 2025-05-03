@@ -3,6 +3,7 @@ module Cli.Commands.Commands (
     runCommit
     ) where
 
+import Git.GitUtils
 
 runInit :: IO()
 runInit = putStrLn $ "\n\ncall runInit\n"
@@ -10,4 +11,4 @@ runInit = putStrLn $ "\n\ncall runInit\n"
 
 
 runCommit :: IO()
-runCommit = putStrLn $ "\n\ncall runCommit\n"
+runCommit = excComand

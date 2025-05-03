@@ -37,8 +37,10 @@ library
     src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
+    aeson,
     base >=4.7 && <5,
-    process
+    process,
+    req
   default-language: Haskell2010
 
 executable Frank-exe
@@ -52,8 +54,10 @@ executable Frank-exe
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
     Frank,
+    aeson,
     base >=4.7 && <5,
-    process
+    process,
+    req
   default-language: Haskell2010
 
 test-suite Frank-test
@@ -68,6 +72,8 @@ test-suite Frank-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
     Frank,
+    aeson,
     base >=4.7 && <5,
-    process
+    process,
+    req
   default-language: Haskell2010
