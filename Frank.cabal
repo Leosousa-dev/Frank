@@ -16,8 +16,8 @@ license:        BSD-3-Clause
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
-    README.md
-    CHANGELOG.md
+  README.md
+  CHANGELOG.md
 
 source-repository head
   type: git
@@ -25,43 +25,55 @@ source-repository head
 
 library
   exposed-modules:
-      Cli.Cli
+    Cli.Commands.Commands
+    Cli.Menssages
+    Cli.Parser
+    Git.GitUtils
   other-modules:
-      Paths_Frank
+    Paths_Frank
   autogen-modules:
-      Paths_Frank
+    Paths_Frank
   hs-source-dirs:
-      src
+    src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+    aeson,
+    base >=4.7 && <5,
+    process,
+    req
   default-language: Haskell2010
 
 executable Frank-exe
   main-is: Main.hs
   other-modules:
-      Paths_Frank
+    Paths_Frank
   autogen-modules:
-      Paths_Frank
+    Paths_Frank
   hs-source-dirs:
-      app
+    app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      Frank
-    , base >=4.7 && <5
+    Frank,
+    aeson,
+    base >=4.7 && <5,
+    process,
+    req
   default-language: Haskell2010
 
 test-suite Frank-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_Frank
+    Paths_Frank
   autogen-modules:
-      Paths_Frank
+    Paths_Frank
   hs-source-dirs:
-      test
+    test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      Frank
-    , base >=4.7 && <5
+    Frank,
+    aeson,
+    base >=4.7 && <5,
+    process,
+    req
   default-language: Haskell2010
