@@ -41,8 +41,8 @@ library
     aeson,
     base >=4.7 && <5,
     bytestring,
+    lens >=5.3.4,
     process,
-    text >=2.1.1,
     wreq
   default-language: Haskell2010
 
@@ -60,7 +60,7 @@ executable Frank-exe
     aeson,
     base >=4.7 && <5,
     bytestring,
+    lens >=5.3.4,
     process,
-    text >=2.1.1,
     wreq
   default-language: Haskell2010
