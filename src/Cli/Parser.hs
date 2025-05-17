@@ -1,14 +1,14 @@
--- Parser de argumentos/comandos
+
 module Cli.Parser (runCli) where  
 
--- import Cli.Menssages    
-import Cli.Commands.Commands
+-- imports
+import Cli.Commands.Commands(runCommit, runInit, runCommandNotFound)
 
 
 runCli :: [String] -> IO()
 runCli args = do
     let fullCommand = unwords args
     case fullCommand of
-        "frank init" -> runInit 
+        "frank" -> runInit 
         "frank commit" -> runCommit
-        _                ->  putStrLn  $ "\n\n\n\nUnknown command: " ++ fullCommand ++ "\n\n"
+        _                ->  runCommandNotFound fullCommand

@@ -22,7 +22,9 @@ description:         Please see the README on GitHub at <https://github.com/gith
 dependencies:
 - base >= 4.7 && < 5
 - process
-- req
+- wreq
+- bytestring
+- text >= 2.1.1
 - aeson
 
 ghc-options:
@@ -50,13 +52,3 @@ executables:
     dependencies:
     - Frank
 
-tests:
-  Frank-test:
-    main:                Spec.hs
-    source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - Frank

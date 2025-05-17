@@ -29,6 +29,7 @@ library
     Cli.Menssages
     Cli.Parser
     Git.GitUtils
+    Http.Client
   other-modules:
     Paths_Frank
   autogen-modules:
@@ -39,8 +40,10 @@ library
   build-depends:
     aeson,
     base >=4.7 && <5,
+    bytestring,
     process,
-    req
+    text >=2.1.1,
+    wreq
   default-language: Haskell2010
 
 executable Frank-exe
@@ -56,24 +59,8 @@ executable Frank-exe
     Frank,
     aeson,
     base >=4.7 && <5,
+    bytestring,
     process,
-    req
-  default-language: Haskell2010
-
-test-suite Frank-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-    Paths_Frank
-  autogen-modules:
-    Paths_Frank
-  hs-source-dirs:
-    test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-    Frank,
-    aeson,
-    base >=4.7 && <5,
-    process,
-    req
+    text >=2.1.1,
+    wreq
   default-language: Haskell2010

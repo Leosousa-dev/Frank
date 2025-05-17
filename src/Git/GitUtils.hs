@@ -1,9 +1,10 @@
 module Git.GitUtils (excComand) where
 
-import System.Process
+import System.Process (readProcess)
 
 excComand :: IO()
 excComand = do
-    _ <- system "git diff --cached --name-only"
-    _ <- system "git --no-pager diff --word-diff=porcelain | grep -E '^[+-][^+-]'"
+    rawDiff <- readProcess "sh" ["-c", "git diff --cached --unified=0 | grep -E '^[+-][^+-]'"] ""
+    
+    putStrLn rawDiff
     return()

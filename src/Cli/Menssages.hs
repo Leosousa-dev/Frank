@@ -4,7 +4,7 @@ module Cli.Menssages (
     msgInvalid,
     msgToken,
     errTokenInvalid,
-    
+    unKnownCommand    
 ) where
 
 
@@ -24,3 +24,7 @@ msgToken    = "Frank: Então tá, manda o token aí, celebridade."
 errTokenInvalid, msgInvalid :: String
 errTokenInvalid = "Frank: Esse token aí parece mais um CPF aleatório. Tenta de novo."
 msgInvalid = "Frank: Isso aí nem opção era. Tenta de novo, Einstein."
+
+
+unKnownCommand :: String
+unKnownCommand = "\n\n\n     ¯\\_(ツ)_/¯\n\n i have no idea what command this is: ☛ "
